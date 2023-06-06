@@ -1,0 +1,30 @@
+{% extends 'app/dummy.html' %}
+{% block title %}
+    
+    <title>Registration</title>
+{% endblock %}
+
+{% block body_block %}
+<div id="reg3">
+    <center>
+    <h1 style="color: white;">Answer the Question</h1>
+    <br>
+    </center> 
+    <div    class="container"  >
+        <h2 style="color: darkblue;">{{ question.title }}</h2>
+        <p style="color: darkblue;">{{ question.description }}</p>
+      
+        
+            <form method="POST"  class="form-group2" style="color: blue;">
+                {% csrf_token %}
+                <div style="width: 50%;">
+                    {{aqo.as_p}}
+                </div>
+                    <center><h5><input type="submit" value="post_A" class="btn btn-primary"></h5></center><br><br><br><br>
+                    
+                    
+            </form>
+       
+        </div>  
+      </div>      
+{% endblock %}

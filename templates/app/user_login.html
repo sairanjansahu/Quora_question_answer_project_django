@@ -1,0 +1,22 @@
+{% extends 'app/dummy.html' %}
+{% block title %}
+    <title>login</title>
+{% endblock %}
+
+{% block body_block %}
+<center>
+<form method="POST">
+
+    {% csrf_token %}
+
+    <h2 style="color: white;">Login Here</h2>
+        <label for="username" style="color: darkblue;">username:</label>
+            <input type="text" name="username" id="username"><br>
+    
+        <label for="password" style="color: darkblue;">password</label>
+            <input type="password" name="password" id="password"><br><br>
+
+    <input type="submit" value="user_login" class=" btn-primary">
+</form>
+</center>
+{% endblock %}
